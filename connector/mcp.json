@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "zy-action-platform": {
+      "type": "sse",
+      "url": "https://zyinfo.pro/action/mcp",
+      "headers": {
+        "Authorization": "Bearer ${ZY_CLIENT_KEY}"
+      },
+      "timeout": 60000
+    }
+  }
+}

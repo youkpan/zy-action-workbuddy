@@ -1,0 +1,20 @@
+{
+  "title": "连接 ZY Action Platform",
+  "title_en": "Connect ZY Action Platform",
+  "description": "填入你本地 ZY Action Platform 实例的 Client Key（config.yaml → workbuddy.client_key）。连接后 WorkBuddy 将通过云端 Hub 转发到你本地实例执行。凭证仅保存在本机 ~/.workbuddy 目录下，不经过云端。",
+  "description_en": "Enter the Client Key of your local ZY Action Platform instance (config.yaml -> workbuddy.client_key). WorkBuddy routes requests through the cloud Hub to your local instance. Credentials are stored locally only (~/.workbuddy).",
+  "docUrl": "https://zyinfo.pro/action/",
+  "docLabel": "如何获取 Client Key？",
+  "docLabel_en": "How to get the Client Key?",
+  "fields": [
+    {
+      "key": "ZY_CLIENT_KEY",
+      "label": "Client Key",
+      "label_en": "Client Key",
+      "type": "password",
+      "required": true,
+      "placeholder": "config.yaml → workbuddy.client_key（sk_live_ 开头）",
+      "description": "本地 AIP 实例用于向 zyinfo.pro Hub 注册的关联密钥；留空时 AIP 启动会自动生成并写入 config.yaml。"
+    }
+  ]
+}

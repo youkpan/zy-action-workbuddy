@@ -1,0 +1,25 @@
+{
+  "name": "ZY Action Platform",
+  "name_zh": "ZY 行动平台",
+  "name_en": "ZY Action Platform",
+  "description": "Connect your locally installed ZY Action Platform: query enterprise data with natural language, inspect and run automation workflows.",
+  "description_zh": "连接本机部署的 ZY Action Platform（AI 数据智能操作系统），用自然语言查数、查看并运行自动化工作流与数据源。",
+  "description_en": "Query data, list/run workflows and inspect datasources on your private ZY Action Platform instance via natural language.",
+  "source": "zy-action-platform",
+  "type": "mcp",
+  "version": "1.0.0",
+  "auth_mode": "token",
+  "minWorkbuddyVersion": "4.24.0",
+  "examples_zh": [
+    "帮我查一下上个月的总销售额是多少",
+    "看看平台上都有哪些自动化工作流",
+    "运行一遍周报自动生成工作流",
+    "列出当前已接入的数据源"
+  ],
+  "examples_en": [
+    "What was our total sales last month?",
+    "List the automation workflows on the platform",
+    "Run the weekly report workflow",
+    "Show me the configured data sources"
+  ]
+}
