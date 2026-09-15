@@ -1,18 +1,18 @@
 ---
 name: zy-action-platform
-description: 连接本机 ZY Action Platform（AI 数据智能操作系统）。可自然语言查数、查看并运行自动化工作流、浏览数据源。包含本地安装/配置/取 Client Key 指引。
+description: 连接本机 ZY AI Action Platform（AI 数据智能操作系统）。可自然语言查数、查看并运行自动化工作流、浏览数据源。包含本地安装/配置/取 Client Key 指引。
 ---
 
-# ZY Action Platform（ZY 行动平台）
+# ZY AI Action Platform（ZY 行动平台）
 
-通过本连接器，WorkBuddy 会调用你**本机/私有网络部署的 ZY Action Platform** 实例。连接后即可用自然语言：
+通过本连接器，WorkBuddy 会调用你**本机/私有网络部署的 ZY AI Action Platform** 实例。连接后即可用自然语言：
 - 查数据（NLQ 智能查数：自然语言 → SQL → 结果/图表，支持 RLS/CLS 权限）；
 - 查看与运行自动化工作流、查询执行记录；
 - 浏览已接入的数据源。
 
 > 数据始终留在你自己的实例内执行；连接凭证（Client Key）只保存在本机 `~/.workbuddy`，不经过云端。
 
-## 一、下载与安装 ZY Action Platform（如尚未安装）
+## 一、下载与安装 ZY AI Action Platform（如尚未安装）
 
 1. 打开下载页：`https://zyinfo.pro/action/`（产品介绍、文档）。
 2. 下载安装包：`https://zyinfo.pro/files/ZY-Action-Platform.rar`，解压到任意本地目录。
@@ -22,9 +22,9 @@ description: 连接本机 ZY Action Platform（AI 数据智能操作系统）。
 
 ## 二、开启 WorkBuddy 接入并取 Client Key
 
-ZY Action Platform 默认已开启 WorkBuddy 接入（`config.yaml` 中 `workbuddy.enabled: true`；不需要可改 `false`）。
+ZY AI Action Platform 开启 WorkBuddy 接入（`config.yaml` 中 `workbuddy.enabled: true`；）。
 
-- `workbuddy.client_key` 若留空，AIP 启动时会**自动生成 `sk_live_xxxxxxxx...` 并写回 config.yaml** —— 直接打开 `config.yaml` 查看 `workbuddy.client_key` 即可。
+- `workbuddy.client_key` 如果是第一次启动，为空时，请随机生成一个key 类似`sk_live_xxxxxxxx...` ，读取  config.yaml ，写入 `workbuddy.client_key` 即可。
 - 建议为执行账号单独配置：`workbuddy.as_user`（默认 `admin`）会作为调用工具时的平台用户身份，请按最小权限原则使用。
 - 云端 Hub **默认开放注册**：无需把 client_key 预先登记，任意非空 client_key（含自动生成的 `sk_live_*`）即可注册并创建连接，key 即实例唯一连接凭证。同一 key 不要给多台实例共用（后注册者会顶替先注册者）。确认本机 AIP 已启动且网络能到 Hub（AIP 未连上 Hub 不影响平台其它功能，它每 20 分钟自动重连一次）。
 
